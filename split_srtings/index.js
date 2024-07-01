@@ -37,12 +37,17 @@ const str = "abc";
 // };
 
 // v2
-const solution = (str) => {
-  let rez = [];
-  for (let i = 0; i < str.length; i += 2) {
-    rez.push(str.slice(i, i + 2).padEnd(2, '_'));
-  }
-  return rez;
-};
+// const solution = (str) => {
+//   let rez = [];
+//   for (let i = 0; i < str.length; i += 2) {
+//     rez.push(str.slice(i, i + 2).padEnd(2, '_'));
+//   }
+//   return rez;
+// };
+
+// v3
+function solution(str){
+  return (str+"_").match(/.{2}/g)||[]
+}
 
 console.log(solution(str));
