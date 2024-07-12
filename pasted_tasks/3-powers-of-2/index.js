@@ -29,18 +29,17 @@
 // 9. return false if n is not an integer or not between 1 and 2 ** 100 - 1
 
 // v1
-// function threePowers(n) {
-//   if (typeof n !== "number" || n < 1 || n > 2 ** 100 - 1) return false;
-//   for (let i = 0; i <= 100; i += 1) {
-//     for (let j = 0; j <= 100; j += 1) {
-//       for (let k = 0; k <= 100; k += 1) {
-//         if (n === 2 ** i + 2 ** j + 2 ** k) return true;
-//       }
-//     }
-//   }
-//   return false;
-
-// }
+function threePowers(n) {
+  if (typeof n !== "number" || n < 1 || n > 2 ** 100 - 1) return false;
+  for (let i = 0; i <= 100; i += 1) {
+    for (let j = 0; j <= 100; j += 1) {
+      for (let k = 0; k <= 100; k += 1) {
+        if (n === 2 ** i + 2 ** j + 2 ** k) return true;
+      }
+    }
+  }
+  return false;
+}
 
 // v2
 // function threePowers(n) {
@@ -55,10 +54,7 @@
 //   return false;
 // }
 
-
 // v3
-
-
 
 console.log(threePowers(2));
 console.log(threePowers(3));
