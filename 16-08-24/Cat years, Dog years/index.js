@@ -36,7 +36,7 @@
 // 4. return the array
 
 // v1
-var humanYearsCatYearsDogYears = function(humanYears) {
+let humanYearsCatYearsDogYears = function(humanYears) {
   let catYears = 0;
   let dogYears = 0;
   
